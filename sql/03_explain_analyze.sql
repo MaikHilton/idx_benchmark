@@ -3,7 +3,7 @@
 -- Файл: 03_explain_analyze.sql
 -- ============================================================
 -- EXPLAIN ANALYZE для кожного типу індексу.
--- JSON-вивід → копіюєш у pganalyze або explain.dalibo.com
+-- JSON-вивід → скопіювати у explain.dalibo.com
 -- ============================================================
 
 -- ============================================================
@@ -52,7 +52,7 @@ FROM generate_series(1, 10000) AS i;
 
 -- ============================================================
 -- ЧАСТИНА B: EXPLAIN FORMAT JSON
--- Для вставки в pganalyze / explain.dalibo.com
+-- Для вставки в explain.dalibo.com
 -- ============================================================
 EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)
 INSERT INTO test_no_index (username, email, score, tags, payload)
